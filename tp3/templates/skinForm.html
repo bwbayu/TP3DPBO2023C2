@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA_TITLE Data Idol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #navbar {
+            color: white;
+        }
+
+        #navbar .nav-item :hover {
+            border-bottom: 3px solid white;
+        }
+
+        #idol .card {
+            width: 250px;
+        }
+
+        #idol .row a {
+            text-decoration: none;
+        }
+
+        .card img {
+            width: 150px;
+        }
+
+        .idol-image .idol-name {
+            color: #055160;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .idol-image .role-name {
+            color: #0AA2C0;
+            font-size: 14px;
+        }
+
+        .idol-image .group-name {
+            color: #EFBC6B;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        #footer a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-info" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.php">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-3">
+        <div class="card my-5 mx-5">
+            <div class="card-header">
+                <h3 class="my-2 text-center">DATA_TITLE Data Idol</h3>
+            </div>
+            <div class="card-body">
+                <form action="#" method="POST" id="form-idol" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="idol-name" class="form-label">Idol Name</label>
+                        <input type="text" class="form-control" id="namaIdol" name="namaIdol" value="DATA_IDOLNAME"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="real-name" class="form-label">Real Name</label>
+                        <input type="text" class="form-control" id="namaAsli" name="namaAsli" value="DATA_REALNAME"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-age" class="form-label">Idol Age</label>
+                        <input type="number" class="form-control" id="umur" name="umur" value="DATA_AGE" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-height" class="form-label">Idol Height</label>
+                        <input type="number" class="form-control" id="tinggi" name="tinggi" value="DATA_HEIGHT"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-nationality" class="form-label">Idol Nationality</label>
+                        <input type="text" class="form-control" id="kebangsaan" name="kebangsaan"
+                            value="DATA_NATIONALITY" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-born" class="form-label">Idol Born</label>
+                        <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="DATA_BORN"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-group">Idol Group</label>
+                        <select class="form-select" id="group" name="group" required>
+                            DATA_SELECTGROUP
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-role">Idol Role</label>
+                        <select class="form-select" id="role" name="role" required>
+                            DATA_SELECTROLE
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idol-image" class="form-label">Idol Image</label>
+                        <input class="form-control" type="file" id="foto" name="foto" required>
+                    </div>
+                    <div class="mb-3 text-end">
+                        <button type="submit" class="btn btn-info text-white" name="btn-submit"
+                            id="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-5 py-3 bg-info text-white" id="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-center text-center">
+                <p class="my-0">&copy; 2023 Copyright by <a href="https://www.instagram.com/__bwbayu/">Bayu
+                        Wicaksono</a>
+                    &#9475; Powered by <a href="https://getbootstrap.com/">Bootstrap.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
